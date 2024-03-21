@@ -7,23 +7,31 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    'eslint:recommended'
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   parser: 'vue-eslint-parser',
   overrides: [
     {
-      files: ["*.vue"],
-      rules: {
-        indent: "off"
+      env: {
+        node: true
+      },
+      files: [
+        '.eslintrc.{js,cjs}'
+      ],
+      parserOptions: {
+        sourceType: 'script'
       }
     }
   ],
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module"
-    },
+    sourceType: 'module',
+    parser: '@typescript-eslint/parser'
+  },
   plugins: [
-    "vue"
+    'vue',
+    '@typescript-eslint'
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
