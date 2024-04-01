@@ -12,6 +12,7 @@
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.11.30",
     "@types/uuid": "^9.0.8",
+    "ant-design-vue": "^4.1.2",
     "axios": "^1.6.7",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
